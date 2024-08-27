@@ -1,0 +1,271 @@
+:root{
+    --background-color:#191d28;
+    --text-color: #ffffff;
+    --button-Background:#2e3241;
+}
+.dark-theme{
+    --background-color:#ffffff;
+    --text-color: #000000;
+    --button-Background:#f8f9fa;
+}
+
+.main{
+    display: flex;
+    width: 100vw;
+    min-width: 100vh;
+    background-color: var(--background-color);
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row;
+    height: 8vh;
+    align-items: center;
+    padding: 30px 40px;
+
+}
+.arrow{
+    margin:0px;
+    padding: 0px;
+    font-size: 13px;
+}
+.logoImage{
+    grid-column: 1/2;
+    width: 17.5rem;
+    height: auto;
+    display: flex;
+    object-fit: contain;
+    align-items: start;
+}
+.currency-selectors{
+    grid-column: 2/3;
+    display: flex;
+    gap:7px;
+    align-items: center;
+    justify-content: center;
+
+}
+.currency-selectors button {
+    white-space: nowrap;
+    display: flex;
+    gap: 4px;
+    margin: 0 5px;
+    padding: 8px 15px;
+    font-size: 17px;
+    background-color: var(--button-Background);
+    border: none;
+    color: var(--text-color);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align text and arrow horizontally */
+}
+
+
+
+.connect-btn{
+    grid-column: 3/4;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.ProgressBarChild{
+position: absolute;
+width: 84%;
+height: 84%;
+border-radius: 50%;
+background-color: var(--background-color);
+display: grid;
+place-items: center;
+}
+
+.TimeBar{
+    color: #50c0bc;
+    font-size: medium;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+}
+.telegramLink{
+    background: #50c0bc;
+    color: #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.telegram{
+    width: 20px;
+    object-fit: contain;
+    background: transparent;
+}
+
+.connect-btn button {
+    margin: 0 5px;
+    padding: 8px 15px;
+    font-size: 17px;
+    background-color: #50c0bc;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Centre{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 0px;
+}
+.propertiesPrice > h1{
+    padding: 0px;
+    margin: 0px;
+color: #50c0bc;
+white-space: nowrap;
+}
+.propertiesPrice > p{
+    padding: 0px;
+    margin: 0px;
+    color: gray;
+}
+.best-price {
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.best-price >span{
+    font-size: 20px;
+}
+.price{
+    color: var(--text-color);
+    font-size: 50px;
+}
+.avg-price{
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+
+.table {
+    width: 98%;
+    margin: 10px 10px;
+    border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+}
+
+.table-header{
+    color: gray;
+}
+.table-row{
+    background-color: var(--button-Background);
+    color: var(--text-color);
+    font-size: larger;
+    font-weight: bold;
+
+}
+
+.table-row td{padding:10px;
+    margin-bottom: 10px;
+}
+.table-row td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.table-row td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+.add-to-home-screen {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+background-color: var(--background-color);
+}
+
+.add-to-home-screen button {
+    padding: 10px 20px;
+    border: none;
+    color: #17a2ab;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: transparent;
+    border:1px solid #186070;
+}
+
+.positive{
+    color: #50c0bc;
+}
+.negative{
+    color: #d82222;
+}
+
+.Parent{
+    position:relative;
+}
+.Parent {
+    position: relative; /* Ensures the .Menu is positioned relative to the Parent */
+  }
+  
+  .Menu {
+    position: absolute;
+    width: 120px;
+    height: fit-content;
+    left: 5px;
+    top: 100%; /* Positions the menu below the button */
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    z-index: 10; /* Ensures the menu is above other content */
+  }
+  
+  .Menu ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 5px; /* Adds some padding to the list */
+    margin: 0; /* Removes default margin */
+    border-radius: 5px;
+  }
+  
+  .Menu ul button {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 10px; /* Adds padding inside each list item */
+    margin: 0; /* Removes any margin */
+    color: black; /* Sets text color to white for better contrast */
+    font-size: 14px; /* Adjusts font size */
+    border-radius: 3px; /* Rounds corners of each list item */
+  }
+  
+  .Menu ul li:hover {
+    cursor: pointer; /* Changes cursor to pointer on hover */
+  }
+  .Menu ul button:focus{
+    background-color: blue;
+    color: white;
+  }
