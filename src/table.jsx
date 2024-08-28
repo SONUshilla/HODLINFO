@@ -6,8 +6,7 @@ function Table()
       useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get("http://localhost:5000/getdata");
-            console.log(response.data.rows); // Now this will correctly log the data
+            const response = await axios.get(process.env.baseURL);
             setdata(response.data.rows);
           } catch (error) {
             console.log(error);
