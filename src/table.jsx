@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 function Table()
-{
+{const baseURL=process.env.BASEURL;
     const[data,setdata]=useState("")
       useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get(process.env.baseURL);
+            const response = await axios.get(`${baseURL}/getdata`);
             setdata(response.data.rows);
           } catch (error) {
             console.log(error);
